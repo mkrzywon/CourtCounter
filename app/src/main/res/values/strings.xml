@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+    <string name="Luke">Luke</string>
+    <string name="Darth">Darth</string>
+    <string name="Score">Score</string>
+    <string name="zero">0</string>
+    <string name="Life">Life</string>
+    <string name="number">100</string>
+    <string name="button1">+10 to score\n-7 from life\nof Darth</string>
+    <string name="button1_1">button1</string>
+    <string name="button2">+15 to score\n-10 from life\nof Darth</string>
+    <string name="button2_1">button2</string>
+    <string name="button3">+5 to score\n+5 to life\nof Luke</string>
+    <string name="button3_1">button3</string>
+    <string name="button4">+10 to score \n-7 from life\nof Luke</string>
+    <string name="button4_1">button4</string>
+    <string name="button5">+15 to score \n-10 from life\nof Luke</string>
+    <string name="button5_1">button5</string>
+    <string name="button6">+5 to score \n+5 to life\nof Darth</string>
+    <string name="button6_1">button6</string>
+    <string name="reset_btn">reset button</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standard">16dp</dimen>
+    <dimen name="half">8dp</dimen>
+    <dimen name="half_margin_landscape">8dp</dimen>
+    <dimen name="quarter">4dp</dimen>
+    <dimen name="quarter_score">4dp</dimen>
+    <dimen name="quarter_margin_panel">4dp</dimen>
+    <dimen name="quarter_padding_button">4dp</dimen>
+    <dimen name="six_padding_button_landscape">6dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="head_text">20sp</dimen>
+    <dimen name="score">14sp</dimen>
+    <dimen name="counter">42sp</dimen>
+    <dimen name="desc">16sp</dimen>
+    <dimen name="view">1dp</dimen>
+</resources>

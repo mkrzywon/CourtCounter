@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/main_layout_and_orientation"
+    android:background="@drawable/earth1"
+    tools:context="com.example.android.courtcounter.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        style="@style/main_layout_and_orientation">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            style="@style/layout_column"
+            android:layout_marginEnd="@dimen/standard"
+            android:layout_marginStart="@dimen/standard"
+            android:layout_marginTop="@dimen/standard"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/text_header"
+                android:text="@string/Luke"
+                android:textSize="@dimen/head_text" />
+
+            <LinearLayout
+                style="@style/main_score_panel"
+                android:background="@drawable/rounded_shape">
+
+                <LinearLayout
+                    style="@style/cell_score_panel"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/score_luke"
+                        style="@style/text_cell_score"
+                        android:background="@color/background1"
+                        android:paddingEnd="@dimen/zero"
+                        android:paddingStart="@dimen/quarter_score"
+                        android:text="@string/Score"
+                        android:textSize="@dimen/score" />
+
+                    <TextView
+                        android:id="@+id/luke_score"
+                        style="@style/text_cell_counter"
+                        android:layout_marginStart="@dimen/quarter_score"
+                        android:text="@string/zero"
+                        android:textSize="@dimen/counter" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/view"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    style="@style/cell_score_panel"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/life_luke"
+                        style="@style/text_cell_score"
+                        android:background="@color/background1"
+                        android:paddingEnd="@dimen/zero"
+                        android:paddingStart="@dimen/quarter_score"
+                        android:text="@string/Life"
+                        android:textSize="@dimen/score" />
+
+
+                    <TextView
+                        android:id="@+id/luke_life"
+                        style="@style/text_cell_counter"
+                        android:layout_marginStart="@dimen/quarter_score"
+                        android:text="@string/number"
+                        android:textSize="@dimen/counter" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/lukeid"
+                style="@style/image"
+                android:contentDescription="@string/Luke"
+                android:src="@drawable/luke" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view"
+                android:background="@color/white" />
+
+            <LinearLayout
+                style="@style/main_layout_panel_portrait"
+                android:layout_marginTop="@dimen/quarter_margin_panel"
+                android:background="@drawable/rounded_shape">
+
+                <LinearLayout
+                    style="@style/cell_layout_left_panel_portrait"
+                    android:layout_margin="@dimen/quarter_margin_panel">
+
+                    <TextView
+                        android:id="@+id/sword1"
+                        style="@style/text_left_panel_portrait"
+                        android:layout_marginEnd="@dimen/quarter_margin_panel"
+                        android:text="@string/button1"
+                        android:textSize="@dimen/desc" />
+
+                    <ImageButton
+                        android:id="@+id/button1"
+                        style="@style/button_panel_portrait"
+                        android:background="@drawable/image_button"
+                        android:contentDescription="@string/button1_1"
+                        android:onClick="addTenForLuke"
+                        android:padding="@dimen/quarter_padding_button"
+                        android:src="@drawable/button1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view"
+                    android:background="@color/background1" />
+
+                <LinearLayout
+                    style="@style/cell_layout_left_panel_portrait"
+                    android:layout_margin="@dimen/quarter_margin_panel">
+
+                    <TextView
+                        android:id="@+id/gun1"
+                        style="@style/text_left_panel_portrait"
+                        android:layout_marginEnd="@dimen/quarter_margin_panel"
+                        android:text="@string/button2"
+                        android:textSize="@dimen/desc" />
+
+                    <ImageButton
+                        android:id="@+id/button2"
+                        style="@style/button_panel_portrait"
+                        android:background="@drawable/image_button"
+                        android:contentDescription="@string/button2_1"
+                        android:onClick="addFifteenForLuke"
+                        android:padding="@dimen/quarter_padding_button"
+                        android:src="@drawable/button2" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view"
+                    android:background="@color/background1" />
+
+                <LinearLayout
+                    style="@style/cell_layout_left_panel_portrait"
+                    android:layout_margin="@dimen/quarter_margin_panel">
+
+                    <TextView
+                        android:id="@+id/shield2"
+                        style="@style/text_left_panel_portrait"
+                        android:layout_marginEnd="@dimen/quarter_margin_panel"
+                        android:text="@string/button3"
+                        android:textSize="@dimen/desc" />
+
+                    <ImageButton
+                        android:id="@+id/button3"
+                        style="@style/button_panel_portrait"
+                        android:background="@drawable/image_button"
+                        android:contentDescription="@string/button3_1"
+                        android:onClick="addFiveForLuke"
+                        android:padding="@dimen/quarter_padding_button"
+                        android:src="@drawable/button3" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/view"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            style="@style/layout_column"
+            android:layout_marginEnd="@dimen/standard"
+            android:layout_marginStart="@dimen/standard"
+            android:layout_marginTop="@dimen/standard"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/text_header"
+                android:text="@string/Darth"
+                android:textSize="@dimen/head_text" />
+
+            <LinearLayout
+                style="@style/main_score_panel"
+                android:background="@drawable/rounded_shape">
+
+                <LinearLayout
+                    style="@style/cell_score_panel"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/score_darth"
+                        style="@style/text_cell_score"
+                        android:background="@color/background1"
+                        android:paddingEnd="@dimen/zero"
+                        android:paddingStart="@dimen/quarter_score"
+                        android:text="@string/Score"
+                        android:textSize="@dimen/score" />
+
+                    <TextView
+                        android:id="@+id/darth_score"
+                        style="@style/text_cell_counter"
+                        android:layout_marginStart="@dimen/quarter_score"
+                        android:text="@string/zero"
+                        android:textSize="@dimen/counter" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="@dimen/view"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    style="@style/cell_score_panel"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/life_darth"
+                        style="@style/text_cell_score"
+                        android:background="@color/background1"
+                        android:paddingEnd="@dimen/zero"
+                        android:paddingStart="@dimen/quarter_score"
+                        android:text="@string/Life"
+                        android:textSize="@dimen/score" />
+
+                    <TextView
+                        android:id="@+id/darth_life"
+                        style="@style/text_cell_counter"
+                        android:layout_marginStart="@dimen/quarter_score"
+                        android:text="@string/number"
+                        android:textSize="@dimen/counter" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/vaderid"
+                style="@style/image"
+                android:contentDescription="@string/Darth"
+                android:src="@drawable/vader" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view"
+                android:background="@color/white" />
+
+            <LinearLayout
+                style="@style/main_layout_panel_portrait"
+                android:layout_marginTop="@dimen/quarter_margin_panel"
+                android:background="@drawable/rounded_shape">
+
+                <LinearLayout
+                    style="@style/cell_layout_right_panel_portrait"
+                    android:layout_margin="@dimen/quarter_margin_panel">
+
+                    <ImageButton
+                        android:id="@+id/button4"
+                        style="@style/button_panel_portrait"
+                        android:background="@drawable/image_button"
+                        android:contentDescription="@string/button4_1"
+                        android:onClick="addTenForDarth"
+                        android:padding="@dimen/quarter_padding_button"
+                        android:src="@drawable/button4" />
+
+                    <TextView
+                        android:id="@+id/sword2"
+                        style="@style/text_right_panel_portrait"
+                        android:layout_marginStart="@dimen/quarter_margin_panel"
+                        android:text="@string/button4"
+                        android:textSize="@dimen/desc" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view"
+                    android:background="@color/background1" />
+
+                <LinearLayout
+                    style="@style/cell_layout_right_panel_portrait"
+                    android:layout_margin="@dimen/quarter_margin_panel">
+
+                    <ImageButton
+                        android:id="@+id/button5"
+                        style="@style/button_panel_portrait"
+                        android:background="@drawable/image_button"
+                        android:contentDescription="@string/button5_1"
+                        android:onClick="addFifteenForDarth"
+                        android:padding="@dimen/quarter_padding_button"
+                        android:src="@drawable/button5" />
+
+                    <TextView
+                        android:id="@+id/gun2"
+                        style="@style/text_right_panel_portrait"
+                        android:layout_marginStart="@dimen/quarter_margin_panel"
+                        android:text="@string/button5"
+                        android:textSize="@dimen/desc" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view"
+                    android:background="@color/background1" />
+
+                <LinearLayout
+                    style="@style/cell_layout_right_panel_portrait"
+                    android:layout_margin="@dimen/quarter_margin_panel">
+
+                    <ImageButton
+                        android:id="@+id/button6"
+                        style="@style/button_panel_portrait"
+                        android:background="@drawable/image_button"
+                        android:contentDescription="@string/button6_1"
+                        android:onClick="addFiveForDarth"
+                        android:padding="@dimen/quarter_padding_button"
+                        android:src="@drawable/button6" />
+
+                    <TextView
+                        android:id="@+id/shield1"
+                        style="@style/text_right_panel_portrait"
+                        android:layout_marginStart="@dimen/quarter_margin_panel"
+                        android:text="@string/button6"
+                        android:textSize="@dimen/desc" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/reset_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/standard"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/reset_btn"
+        android:onClick="reset_button"
+        android:src="@drawable/reset" />
+
+</RelativeLayout>
