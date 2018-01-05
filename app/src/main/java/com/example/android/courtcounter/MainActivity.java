@@ -303,7 +303,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void winnerDarth(int lifeLuke) {
 
-        String statistics = ("<p style=text-align:center><b>Darth received:</b></p>" + addFiveScoreDarth + " points for using shield<br>" + addTenScoreDarth + " points for using sword<br>" + addFifteenScoreDarth + " points for using gun<br>" + "<p style=text-align:center><b>Luke received:</b></p>" + addFiveScoreLuke + " points for using shield<br>" + addTenScoreLuke + " points for using sword<br>" + addFifteenScoreLuke + " points for using gun<br>");
+        String statistics = (getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun) + getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun));
         String title = getString(R.string.titledarth);
         String darth_winner = getString(R.string.winnerdarth);
 
@@ -324,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void winnerLuke(int lifeDarth) {
 
-        String statistics = ("<p style=text-align:center><b>Luke received:</b></p>" + addFiveScoreLuke + " points for using shield<br>" + addTenScoreLuke + " points for using sword<br>" + addFifteenScoreLuke + " points for using gun<br>" + "<p style=text-align:center><b>Darth received:</b></p>" + addFiveScoreDarth + " points for using shield<br>" + addTenScoreDarth + " points for using sword<br>" + addFifteenScoreDarth + " points for using gun<br>");
+        String statistics = (getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun) + getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun));
         String title = getString(R.string.titleluke);
         String luke_winner = getString(R.string.winnerluke);
 
