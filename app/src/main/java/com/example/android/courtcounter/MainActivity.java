@@ -304,11 +304,12 @@ public class MainActivity extends AppCompatActivity {
     public void winnerDarth(int lifeLuke) {
 
         String statistics = ("<p style=text-align:center><b>Darth received:</b></p>" + addFiveScoreDarth + " points for using shield<br>" + addTenScoreDarth + " points for using sword<br>" + addFifteenScoreDarth + " points for using gun<br>" + "<p style=text-align:center><b>Luke received:</b></p>" + addFiveScoreLuke + " points for using shield<br>" + addTenScoreLuke + " points for using sword<br>" + addFifteenScoreLuke + " points for using gun<br>");
-        String title = ("GAME OVER - Darth's Victory:");
+        String title = getString(R.string.titledarth);
+        String darth_winner = getString(R.string.winnerdarth);
 
         if (lifeLuke <= 0) {
             lukeid.setImageResource(R.drawable.luke_defeated);
-            Toast toast = Toast.makeText(this, "How dared you! Next time I'll mess you up!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, darth_winner, Toast.LENGTH_LONG);
             toast.show();
             AlertDialog.Builder show = new AlertDialog.Builder(this);
                     show.setTitle(title);
@@ -324,11 +325,12 @@ public class MainActivity extends AppCompatActivity {
     public void winnerLuke(int lifeDarth) {
 
         String statistics = ("<p style=text-align:center><b>Luke received:</b></p>" + addFiveScoreLuke + " points for using shield<br>" + addTenScoreLuke + " points for using sword<br>" + addFifteenScoreLuke + " points for using gun<br>" + "<p style=text-align:center><b>Darth received:</b></p>" + addFiveScoreDarth + " points for using shield<br>" + addTenScoreDarth + " points for using sword<br>" + addFifteenScoreDarth + " points for using gun<br>");
-        String title = ("GAME OVER - Luke's Victory:");
+        String title = getString(R.string.titleluke);
+        String luke_winner = getString(R.string.winnerluke);
 
         if (lifeDarth <= 0) {
             vaderid.setImageResource(R.drawable.vader_defeated);
-            Toast toast = Toast.makeText(this, "Oh, no! You have defeated me!", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, luke_winner, Toast.LENGTH_LONG);
             toast.show();
             AlertDialog.Builder show = new AlertDialog.Builder(this);
                     show.setTitle(title);

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
     style="@style/main_layout_and_orientation"
     android:background="@drawable/earth1"
     tools:context="com.example.android.courtcounter.MainActivity">
@@ -349,7 +354,8 @@
         android:id="@+id/reset_button_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/standard"
+        android:layout_below="@id/linearLayout"
         android:layout_centerHorizontal="true"
         android:paddingBottom="@dimen/standard"
         android:background="@android:color/transparent"
@@ -357,4 +363,6 @@
         android:onClick="reset_button"
         android:src="@drawable/reset" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
