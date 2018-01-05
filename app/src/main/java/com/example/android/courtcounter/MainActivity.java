@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Saves the current state to avoid data in case of screen rotation.
+     * Saves the current state to avoid data loss in case of screen rotation.
      */
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
