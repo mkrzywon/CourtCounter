@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (lifeLuke == 0 || lifeLuke >= 100) {
 
-                return;
+                lifeLuke = 100;
             }
 
         }
@@ -196,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (lifeDarth == 0 || lifeDarth >= 100) {
 
-                return;
+                lifeDarth = 100;
 
             }
         }
@@ -230,8 +230,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        displayScoreForLuke(scoreLuke);
-        displayLifeForDarth(lifeDarth);
+        displayScoreForDarth(scoreDarth);
+        displayLifeForLuke(lifeLuke);
 
     }
 
@@ -259,8 +259,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        displayScoreForLuke(scoreLuke);
-        displayLifeForDarth(lifeDarth);
+        displayScoreForDarth(scoreDarth);
+        displayLifeForLuke(lifeLuke);
 
     }
 
