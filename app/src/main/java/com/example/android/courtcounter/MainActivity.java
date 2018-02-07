@@ -113,11 +113,13 @@ public class MainActivity extends AppCompatActivity {
             if (lifeLuke == 0 || lifeLuke >= 100) {
 
                 return;
-                
             }
+
         }
+
             displayScoreForLuke(scoreLuke);
             displayLifeForLuke(lifeLuke);
+
     }
 
     /**
@@ -126,22 +128,27 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTenForLuke(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
 
-            if (lifeDarth > 0) {
-                scoreLuke = scoreLuke + 10;
-                addTenScoreLuke = addTenScoreLuke + 10;
-                if (lifeDarth < 7) {
-                    lifeDarth = 0;
-                } else {
-                    lifeDarth = lifeDarth - 7;
-                }
+            scoreLuke += 10;
+            lifeDarth -= 7;
+            addTenScoreLuke += 10;
+            winnerLuke(lifeDarth);
+
+        }else {
+
+            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+
+                lifeDarth = 0;
+                scoreLuke += 0;
+                addTenScoreLuke +=0;
             }
+
+        }
 
             displayScoreForLuke(scoreLuke);
             displayLifeForDarth(lifeDarth);
-            winnerLuke(lifeDarth);
-        }
+
     }
 
     /**
@@ -150,22 +157,27 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFifteenForLuke(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
 
-            if (lifeDarth > 0) {
-                scoreLuke = scoreLuke + 15;
-                addFifteenScoreLuke = addFifteenScoreLuke + 15;
-                if (lifeDarth < 10) {
-                    lifeDarth = 0;
-                } else {
-                    lifeDarth = lifeDarth - 10;
-                }
+            scoreLuke += 15;
+            lifeDarth -= 10;
+            addFifteenScoreLuke += 15;
+            winnerLuke(lifeDarth);
+
+        }else {
+
+            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+
+                lifeDarth = 0;
+                scoreLuke += 0;
+                addFifteenScoreLuke +=0;
             }
 
-            displayScoreForLuke(scoreLuke);
-            displayLifeForDarth(lifeDarth);
-            winnerLuke(lifeDarth);
         }
+
+        displayScoreForLuke(scoreLuke);
+        displayLifeForDarth(lifeDarth);
+
     }
 
     /**
@@ -191,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
             displayScoreForDarth(scoreDarth);
             displayLifeForDarth(lifeDarth);
+
     }
 
     /**
@@ -199,22 +212,27 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTenForDarth(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
 
-            if (lifeLuke > 0) {
-                scoreDarth = scoreDarth + 10;
-                addTenScoreDarth = addTenScoreDarth + 10;
-                if (lifeLuke < 7) {
-                    lifeLuke = 0;
-                } else {
-                    lifeLuke = lifeLuke - 7;
-                }
+            scoreDarth += 10;
+            lifeLuke -= 7;
+            addTenScoreDarth += 10;
+            winnerDarth(lifeLuke);
+
+        }else {
+
+            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+
+                lifeLuke = 0;
+                scoreDarth += 0;
+                addTenScoreDarth +=0;
             }
 
-            displayScoreForDarth(scoreDarth);
-            displayLifeForLuke(lifeLuke);
-            winnerDarth(lifeLuke);
         }
+
+        displayScoreForLuke(scoreLuke);
+        displayLifeForDarth(lifeDarth);
+
     }
 
     /**
@@ -223,22 +241,27 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFifteenForDarth(View view) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
 
-            if (lifeLuke > 0) {
-                scoreDarth = scoreDarth + 15;
-                addFifteenScoreDarth = addFifteenScoreDarth + 15;
-                if (lifeLuke < 10) {
-                    lifeLuke = 0;
-                } else {
-                    lifeLuke = lifeLuke - 10;
-                }
+            scoreDarth += 15;
+            lifeLuke -= 10;
+            addFifteenScoreDarth += 15;
+            winnerDarth(lifeLuke);
+
+        }else {
+
+            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+
+                lifeLuke = 0;
+                scoreDarth += 0;
+                addFifteenScoreDarth +=0;
             }
 
-            displayScoreForDarth(scoreDarth);
-            displayLifeForLuke(lifeLuke);
-            winnerDarth(lifeLuke);
         }
+
+        displayScoreForLuke(scoreLuke);
+        displayLifeForDarth(lifeDarth);
+
     }
 
     /**
