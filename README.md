@@ -15,3 +15,8 @@ The main features:
 - After the game ends a small message shows up at the bottom and the bigger window with statictics in the center of the screen.
 - Values during the game save state in case of screen rotation.
 - Reset buton brings back the values and images to input state. 
+
+<p align="middle">
+  <img src="../master/app/src/main/res/Portrait_counter.jpg" width="400" />
+  <img src="../master/app/src/main/res/Portrait with messages.jpg" width="400" /> 
+</p>
