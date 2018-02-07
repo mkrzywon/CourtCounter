@@ -102,22 +102,22 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForLuke(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeLuke > 0 && lifeLuke < 100) {
 
-            if (lifeLuke < 100) {
-                scoreLuke = scoreLuke + 5;
-                lifeLuke = lifeLuke + 5;
-                addFiveScoreLuke = addFiveScoreLuke + 5;
-                if (lifeLuke < 1) {
-                    lifeLuke = 0;
-                } else {
-                    scoreLuke = ((scoreLuke + 5) - 5);
-                }
+            scoreLuke += 5;
+            lifeLuke += 5;
+            addFiveScoreLuke += 5;
+
+        }else {
+
+            if (lifeLuke == 0 || lifeLuke >= 100) {
+
+                return;
+                
             }
-
+        }
             displayScoreForLuke(scoreLuke);
             displayLifeForLuke(lifeLuke);
-        }
     }
 
     /**
@@ -174,22 +174,23 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForDarth(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeDarth > 0 && lifeDarth < 100) {
 
-            if (lifeDarth < 100) {
-                scoreDarth = scoreDarth + 5;
-                lifeDarth = lifeDarth + 5;
-                addFiveScoreDarth = addFiveScoreDarth + 5;
-                if (lifeDarth < 1) {
-                    lifeDarth = 0;
-                } else {
-                    scoreDarth = ((scoreDarth + 5) - 5);
-                }
+            scoreDarth += 5;
+            lifeDarth += 5;
+            addFiveScoreDarth += 5;
+
+        }else {
+
+            if (lifeDarth == 0 || lifeDarth >= 100) {
+
+                return;
+
             }
+        }
 
             displayScoreForDarth(scoreDarth);
             displayLifeForDarth(lifeDarth);
-        }
     }
 
     /**
