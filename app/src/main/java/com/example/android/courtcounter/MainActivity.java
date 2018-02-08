@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForLuke(View v) {
 
-        if (lifeLuke > 0 && lifeLuke < 100) {
+        if (lifeLuke > 0 && lifeLuke < 100 && lifeDarth > 0 && lifeDarth < 100) {
 
             scoreLuke += 5;
             lifeLuke += 5;
@@ -110,7 +110,12 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
 
-            if (lifeLuke == 0 || lifeLuke >= 100) {
+            if (lifeLuke <= 0) {
+
+                lifeLuke = 0;
+            }
+
+            if (lifeLuke >= 100) {
 
                 lifeLuke = 100;
             }
@@ -128,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTenForLuke(View v) {
 
-        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
+        if (lifeLuke > 0 && lifeLuke <= 100 && lifeDarth > 0 && lifeDarth <= 100) {
 
             scoreLuke += 10;
             lifeDarth -= 7;
@@ -137,11 +142,14 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
 
-            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+            if (lifeDarth <= 0) {
 
                 lifeDarth = 0;
-                scoreLuke += 0;
-                addTenScoreLuke +=0;
+            }
+
+            if (lifeDarth == 100) {
+
+                lifeDarth = 100;
             }
 
         }
@@ -157,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFifteenForLuke(View v) {
 
-        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
+        if (lifeLuke > 0 && lifeLuke <= 100 && lifeDarth > 0 && lifeDarth <= 100) {
 
             scoreLuke += 15;
             lifeDarth -= 10;
@@ -166,13 +174,15 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
 
-            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+            if (lifeDarth <= 0) {
 
                 lifeDarth = 0;
-                scoreLuke += 0;
-                addFifteenScoreLuke +=0;
             }
 
+            if (lifeDarth == 100) {
+
+                lifeDarth = 100;
+            }
         }
 
         displayScoreForLuke(scoreLuke);
@@ -186,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForDarth(View v) {
 
-        if (lifeDarth > 0 && lifeDarth < 100) {
+        if (lifeDarth > 0 && lifeDarth < 100 && lifeLuke > 0 && lifeLuke < 100) {
 
             scoreDarth += 5;
             lifeDarth += 5;
@@ -194,10 +204,15 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
 
-            if (lifeDarth == 0 || lifeDarth >= 100) {
+            if (lifeDarth <= 0) {
+
+                lifeDarth = 0;
+
+            }
+
+            if (lifeDarth >= 100) {
 
                 lifeDarth = 100;
-
             }
         }
 
@@ -212,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTenForDarth(View v) {
 
-        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
+        if (lifeDarth > 0 && lifeDarth <= 100 && lifeLuke > 0 && lifeLuke <= 100) {
 
             scoreDarth += 10;
             lifeLuke -= 7;
@@ -221,11 +236,14 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
 
-            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+            if (lifeLuke <= 0) {
 
                 lifeLuke = 0;
-                scoreDarth += 0;
-                addTenScoreDarth +=0;
+            }
+
+            if (lifeLuke == 100) {
+
+                lifeLuke = 100;
             }
 
         }
@@ -241,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFifteenForDarth(View view) {
 
-        if ((lifeLuke > 0 && lifeLuke <= 100) && (lifeDarth > 0 && lifeDarth <= 100)) {
+        if (lifeDarth > 0 && lifeDarth <= 100 && lifeLuke > 0 && lifeLuke <= 100) {
 
             scoreDarth += 15;
             lifeLuke -= 10;
@@ -250,11 +268,14 @@ public class MainActivity extends AppCompatActivity {
 
         }else {
 
-            if (lifeLuke <= 0 || lifeDarth <= 0 ) {
+            if (lifeLuke <= 0) {
 
                 lifeLuke = 0;
-                scoreDarth += 0;
-                addFifteenScoreDarth +=0;
+            }
+
+            if (lifeLuke == 100) {
+
+                lifeLuke = 100;
             }
 
         }
