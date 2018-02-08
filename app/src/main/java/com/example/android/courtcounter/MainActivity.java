@@ -327,11 +327,11 @@ public class MainActivity extends AppCompatActivity {
 
         String statistics = (getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun) + getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun));
         String title = getString(R.string.titledarth);
-        String darth_winner = getString(R.string.winnerdarth);
+        String darthWinner = getString(R.string.winnerdarth);
 
         if (lifeLuke <= 0) {
             lukeid.setImageResource(R.drawable.luke_defeated);
-            Toast toast = Toast.makeText(this, darth_winner, Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, darthWinner, Toast.LENGTH_LONG);
             toast.show();
             AlertDialog.Builder show = new AlertDialog.Builder(this);
                     show.setTitle(title);
@@ -348,11 +348,11 @@ public class MainActivity extends AppCompatActivity {
 
         String statistics = (getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun) + getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun));
         String title = getString(R.string.titleluke);
-        String luke_winner = getString(R.string.winnerluke);
+        String lukeWinner = getString(R.string.winnerluke);
 
         if (lifeDarth <= 0) {
             vaderid.setImageResource(R.drawable.vader_defeated);
-            Toast toast = Toast.makeText(this, luke_winner, Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, lukeWinner, Toast.LENGTH_LONG);
             toast.show();
             AlertDialog.Builder show = new AlertDialog.Builder(this);
                     show.setTitle(title);
