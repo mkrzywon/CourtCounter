@@ -146,12 +146,6 @@ public class MainActivity extends AppCompatActivity {
 
                 lifeDarth = 0;
             }
-
-            if (lifeDarth == 100) {
-
-                lifeDarth = 100;
-            }
-
         }
 
             displayScoreForLuke(scoreLuke);
@@ -177,11 +171,6 @@ public class MainActivity extends AppCompatActivity {
             if (lifeDarth <= 0) {
 
                 lifeDarth = 0;
-            }
-
-            if (lifeDarth == 100) {
-
-                lifeDarth = 100;
             }
         }
 
@@ -240,12 +229,6 @@ public class MainActivity extends AppCompatActivity {
 
                 lifeLuke = 0;
             }
-
-            if (lifeLuke == 100) {
-
-                lifeLuke = 100;
-            }
-
         }
 
         displayScoreForDarth(scoreDarth);
@@ -272,12 +255,6 @@ public class MainActivity extends AppCompatActivity {
 
                 lifeLuke = 0;
             }
-
-            if (lifeLuke == 100) {
-
-                lifeLuke = 100;
-            }
-
         }
 
         displayScoreForDarth(scoreDarth);
