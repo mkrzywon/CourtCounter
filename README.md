@@ -20,3 +20,15 @@ The main features:
   <img src="../master/app/src/main/res/Portrait_counter.jpg" width="400" />
   <img src="../master/app/src/main/res/Portrait with messages.jpg" width="400" /> 
 </p>
+
+## Credits
+
+### Images:
+
+https://static.pexels.com/photos/5439/earth-space.jpg by Jaymantri
+
+http://lego.wikia.com/wiki/File:29341159645_da4d0a0b93_b.jpg by DraftMountain22
+
+https://pl.pinterest.com/pin/533676624586391655/
+
+
