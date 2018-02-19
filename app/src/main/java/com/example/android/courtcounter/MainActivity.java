@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView lukeid;
     private ImageView vaderid;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         lukeid = findViewById(R.id.lukeid);
         vaderid = findViewById(R.id.vaderid);
+
     }
 
     /**
@@ -145,6 +147,17 @@ public class MainActivity extends AppCompatActivity {
             if (lifeDarth <= 0) {
 
                 lifeDarth = 0;
+                scoreLuke += 0;
+                addTenScoreLuke += 0;
+
+            }
+
+            if (lifeDarth == 100) {
+
+                lifeDarth = 100;
+                scoreLuke += 0;
+                addFifteenScoreLuke += 0;
+
             }
         }
 
@@ -171,6 +184,17 @@ public class MainActivity extends AppCompatActivity {
             if (lifeDarth <= 0) {
 
                 lifeDarth = 0;
+                scoreLuke += 0;
+                addFifteenScoreLuke += 0;
+
+            }
+
+            if (lifeDarth == 100) {
+
+                lifeDarth = 100;
+                scoreLuke += 0;
+                addFifteenScoreLuke += 0;
+
             }
         }
 
@@ -228,6 +252,17 @@ public class MainActivity extends AppCompatActivity {
             if (lifeLuke <= 0) {
 
                 lifeLuke = 0;
+                scoreDarth += 0;
+                addTenScoreDarth += 0;
+
+            }
+
+            if (lifeLuke == 100) {
+
+                lifeLuke = 100;
+                scoreDarth += 0;
+                addFifteenScoreDarth += 0;
+
             }
         }
 
@@ -254,6 +289,17 @@ public class MainActivity extends AppCompatActivity {
             if (lifeLuke <= 0) {
 
                 lifeLuke = 0;
+                scoreDarth += 0;
+                addFifteenScoreDarth += 0;
+
+            }
+
+            if (lifeLuke == 100) {
+
+                lifeLuke = 100;
+                scoreDarth += 0;
+                addFifteenScoreDarth += 0;
+
             }
         }
 
