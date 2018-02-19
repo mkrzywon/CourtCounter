@@ -31,4 +31,21 @@ http://lego.wikia.com/wiki/File:29341159645_da4d0a0b93_b.jpg by DraftMountain22
 
 https://pl.pinterest.com/pin/533676624586391655/
 
+http://lego.wikia.com/wiki/File:ClonewarsAnakin.jpeg by Jeyo
+
+swords, guns and shields: https://www.bricklink.com
+
+buttons: http://www.pngmart.com/image/28689
+
+### Other inspirational sources:
+
+http://abhiandroid.com/ui/imagebutton
+
+http://abhiandroid.com/ui/custom-alert-dialog-example-android-studio.html
+
+https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap
+
+https://developer.android.com/reference/android/widget/ImageButton.html
+
+https://stackoverflow.com/questions/16769654/how-to-use-onsaveinstancestate-and-onrestoreinstancestate
 
