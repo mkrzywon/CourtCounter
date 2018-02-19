@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     private String titleDarth;
     private String titleLuke;
-    private String statisticsDarth;
-    private String statisticsLuke;
     private String darthWinner;
     private String lukeWinner;
 
@@ -108,9 +106,6 @@ public class MainActivity extends AppCompatActivity {
         titleDarth = getString(R.string.titledarth);
         titleLuke = getString(R.string.titleluke);
 
-        statisticsDarth = (getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun) + getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun));
-        statisticsLuke = (getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun) + getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun));
-
         darthWinner = getString(R.string.winnerdarth);
         lukeWinner = getString(R.string.winnerluke);
 
@@ -165,16 +160,12 @@ public class MainActivity extends AppCompatActivity {
             if (lifeDarth <= 0) {
 
                 lifeDarth = 0;
-                scoreLuke += 0;
-                addTenScoreLuke += 0;
 
             }
 
             if (lifeDarth == 100) {
 
                 lifeDarth = 100;
-                scoreLuke += 0;
-                addFifteenScoreLuke += 0;
 
             }
         }
@@ -202,16 +193,12 @@ public class MainActivity extends AppCompatActivity {
             if (lifeDarth <= 0) {
 
                 lifeDarth = 0;
-                scoreLuke += 0;
-                addFifteenScoreLuke += 0;
 
             }
 
             if (lifeDarth == 100) {
 
                 lifeDarth = 100;
-                scoreLuke += 0;
-                addFifteenScoreLuke += 0;
 
             }
         }
@@ -270,16 +257,12 @@ public class MainActivity extends AppCompatActivity {
             if (lifeLuke <= 0) {
 
                 lifeLuke = 0;
-                scoreDarth += 0;
-                addTenScoreDarth += 0;
 
             }
 
             if (lifeLuke == 100) {
 
                 lifeLuke = 100;
-                scoreDarth += 0;
-                addFifteenScoreDarth += 0;
 
             }
         }
@@ -307,16 +290,12 @@ public class MainActivity extends AppCompatActivity {
             if (lifeLuke <= 0) {
 
                 lifeLuke = 0;
-                scoreDarth += 0;
-                addFifteenScoreDarth += 0;
 
             }
 
             if (lifeLuke == 100) {
 
                 lifeLuke = 100;
-                scoreDarth += 0;
-                addFifteenScoreDarth += 0;
 
             }
         }
@@ -330,6 +309,8 @@ public class MainActivity extends AppCompatActivity {
      * In case of Victory of Darth new image, message and alert dialog with statistics are being displayed.
      */
     public void winnerDarth() {
+
+        String statisticsDarth = (getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun) + getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun));
 
         if (lifeLuke <= 0) {
             lukeid.setImageResource(R.drawable.luke_defeated);
@@ -347,6 +328,8 @@ public class MainActivity extends AppCompatActivity {
      * In case of Victory of Luke new image, message and alert dialog with statistics are being displayed.
      */
     public void winnerLuke() {
+
+        String statisticsLuke = (getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun) + getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun));
 
         if (lifeDarth <= 0) {
             vaderid.setImageResource(R.drawable.vader_defeated);
