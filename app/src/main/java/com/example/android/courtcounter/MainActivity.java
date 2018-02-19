@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method determines the path and strings for final message of both players.
+     * Sets the path and strings for final message of both players.
      */
     public void viewComponents() {
 
