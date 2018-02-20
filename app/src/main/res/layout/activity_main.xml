@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/earth1"
     android:fillViewport="true">
 
     <RelativeLayout
         style="@style/main_layout_and_orientation"
-        android:background="@drawable/earth1"
         tools:context="com.example.android.courtcounter.MainActivity">
 
         <LinearLayout
@@ -354,7 +354,7 @@
             android:id="@+id/reset_button_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/linearLayout"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/standard"
             android:background="@android:color/transparent"

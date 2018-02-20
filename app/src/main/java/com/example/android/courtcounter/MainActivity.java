@@ -15,24 +15,19 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_SCORE_DARTH = "LevelScoreDarth";
     private static final String KEY_LIFE_LUKE = "LevelLifeLuke";
     private static final String KEY_LIFE_DARTH = "LevelLiveDarth";
-
+    private static final String KEY_FIVE_SCORE_LUKE = "StatsFiveScoreLuke";
+    private static final String KEY_TEN_SCORE_LUKE = "StatsTenScoreLuke";
+    private static final String KEY_FIFTEEN_SCORE_LUKE = "StatsFifteenScoreLuke";
+    private static final String KEY_FIVE_SCORE_DARTH = "StatsFiveScoreDarth";
+    private static final String KEY_TEN_SCORE_DARTH = "StatsTenScoreDarth";
+    private static final String KEY_FIFTEEN_SCORE_DARTH = "StatsFifteenScoreDarth";
     private int scoreLuke = 0;
     private int scoreDarth = 0;
     private int lifeLuke = 100;
     private int lifeDarth = 100;
-
-    private static final String KEY_FIVE_SCORE_LUKE = "StatsFiveScoreLuke";
-    private static final String KEY_TEN_SCORE_LUKE = "StatsTenScoreLuke";
-    private static final String KEY_FIFTEEN_SCORE_LUKE = "StatsFifteenScoreLuke";
-
     private int addFiveScoreLuke = 0;
     private int addTenScoreLuke = 0;
     private int addFifteenScoreLuke = 0;
-
-    private static final String KEY_FIVE_SCORE_DARTH = "StatsFiveScoreDarth";
-    private static final String KEY_TEN_SCORE_DARTH = "StatsTenScoreDarth";
-    private static final String KEY_FIFTEEN_SCORE_DARTH = "StatsFifteenScoreDarth";
-
     private int addFiveScoreDarth = 0;
     private int addTenScoreDarth = 0;
     private int addFifteenScoreDarth = 0;
@@ -40,13 +35,17 @@ public class MainActivity extends AppCompatActivity {
     private ImageView lukeid;
     private ImageView vaderid;
 
+    private String titleDarth;
+    private String titleLuke;
+    private String darthWinner;
+    private String lukeWinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lukeid = findViewById(R.id.lukeid);
-        vaderid = findViewById(R.id.vaderid);
+        viewComponents();
     }
 
     /**
@@ -56,18 +55,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
 
-        savedInstanceState.putInt(KEY_SCORE_LUKE,scoreLuke);
-        savedInstanceState.putInt(KEY_SCORE_DARTH,scoreDarth);
-        savedInstanceState.putInt(KEY_LIFE_LUKE,lifeLuke);
-        savedInstanceState.putInt(KEY_LIFE_DARTH,lifeDarth);
+        savedInstanceState.putInt(KEY_SCORE_LUKE, scoreLuke);
+        savedInstanceState.putInt(KEY_SCORE_DARTH, scoreDarth);
+        savedInstanceState.putInt(KEY_LIFE_LUKE, lifeLuke);
+        savedInstanceState.putInt(KEY_LIFE_DARTH, lifeDarth);
 
-        savedInstanceState.putInt(KEY_FIVE_SCORE_LUKE,addFiveScoreLuke);
-        savedInstanceState.putInt(KEY_TEN_SCORE_LUKE,addTenScoreLuke);
-        savedInstanceState.putInt(KEY_FIFTEEN_SCORE_LUKE,addFifteenScoreLuke);
+        savedInstanceState.putInt(KEY_FIVE_SCORE_LUKE, addFiveScoreLuke);
+        savedInstanceState.putInt(KEY_TEN_SCORE_LUKE, addTenScoreLuke);
+        savedInstanceState.putInt(KEY_FIFTEEN_SCORE_LUKE, addFifteenScoreLuke);
 
-        savedInstanceState.putInt(KEY_FIVE_SCORE_DARTH,addFiveScoreDarth);
-        savedInstanceState.putInt(KEY_TEN_SCORE_DARTH,addTenScoreDarth);
-        savedInstanceState.putInt(KEY_FIFTEEN_SCORE_DARTH,addFifteenScoreDarth);
+        savedInstanceState.putInt(KEY_FIVE_SCORE_DARTH, addFiveScoreDarth);
+        savedInstanceState.putInt(KEY_TEN_SCORE_DARTH, addTenScoreDarth);
+        savedInstanceState.putInt(KEY_FIFTEEN_SCORE_DARTH, addFifteenScoreDarth);
     }
 
     /**
@@ -75,25 +74,41 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-            super.onRestoreInstanceState(savedInstanceState);
+        super.onRestoreInstanceState(savedInstanceState);
 
-            scoreLuke = savedInstanceState.getInt(KEY_SCORE_LUKE);
-            scoreDarth = savedInstanceState.getInt(KEY_SCORE_DARTH);
-            lifeLuke = savedInstanceState.getInt(KEY_LIFE_LUKE);
-            lifeDarth = savedInstanceState.getInt(KEY_LIFE_DARTH);
+        scoreLuke = savedInstanceState.getInt(KEY_SCORE_LUKE);
+        scoreDarth = savedInstanceState.getInt(KEY_SCORE_DARTH);
+        lifeLuke = savedInstanceState.getInt(KEY_LIFE_LUKE);
+        lifeDarth = savedInstanceState.getInt(KEY_LIFE_DARTH);
 
-            addFiveScoreLuke = savedInstanceState.getInt(KEY_FIVE_SCORE_LUKE);
-            addTenScoreLuke = savedInstanceState.getInt(KEY_TEN_SCORE_LUKE);
-            addFifteenScoreLuke = savedInstanceState.getInt(KEY_FIFTEEN_SCORE_LUKE);
+        addFiveScoreLuke = savedInstanceState.getInt(KEY_FIVE_SCORE_LUKE);
+        addTenScoreLuke = savedInstanceState.getInt(KEY_TEN_SCORE_LUKE);
+        addFifteenScoreLuke = savedInstanceState.getInt(KEY_FIFTEEN_SCORE_LUKE);
 
-            addFiveScoreDarth = savedInstanceState.getInt(KEY_FIVE_SCORE_DARTH);
-            addTenScoreDarth = savedInstanceState.getInt(KEY_TEN_SCORE_DARTH);
-            addFifteenScoreDarth = savedInstanceState.getInt(KEY_FIFTEEN_SCORE_DARTH);
+        addFiveScoreDarth = savedInstanceState.getInt(KEY_FIVE_SCORE_DARTH);
+        addTenScoreDarth = savedInstanceState.getInt(KEY_TEN_SCORE_DARTH);
+        addFifteenScoreDarth = savedInstanceState.getInt(KEY_FIFTEEN_SCORE_DARTH);
 
-            displayScoreForLuke(scoreLuke);
-            displayScoreForDarth(scoreDarth);
-            displayLifeForLuke(lifeLuke);
-            displayLifeForDarth(lifeDarth);
+        displayScoreForLuke(scoreLuke);
+        displayScoreForDarth(scoreDarth);
+        displayLifeForLuke(lifeLuke);
+        displayLifeForDarth(lifeDarth);
+    }
+
+    /**
+     * Sets the path and strings for final message of both players.
+     */
+    public void viewComponents() {
+
+        lukeid = findViewById(R.id.lukeid);
+        vaderid = findViewById(R.id.vaderid);
+
+        titleDarth = getString(R.string.titledarth);
+        titleLuke = getString(R.string.titleluke);
+
+        darthWinner = getString(R.string.winnerdarth);
+        lukeWinner = getString(R.string.winnerluke);
+
     }
 
     /**
@@ -102,22 +117,29 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForLuke(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeLuke > 0 && lifeLuke < 100 && lifeDarth > 0 && lifeDarth < 100) {
 
-            if (lifeLuke < 100) {
-                scoreLuke = scoreLuke + 5;
-                lifeLuke = lifeLuke + 5;
-                addFiveScoreLuke = addFiveScoreLuke + 5;
-                if (lifeLuke < 1) {
-                    lifeLuke = 0;
-                } else {
-                    scoreLuke = ((scoreLuke + 5) - 5);
-                }
+            scoreLuke += 5;
+            lifeLuke += 5;
+            addFiveScoreLuke += 5;
+
+        } else {
+
+            if (lifeLuke <= 0) {
+
+                lifeLuke = 0;
             }
 
-            displayScoreForLuke(scoreLuke);
-            displayLifeForLuke(lifeLuke);
+            if (lifeLuke >= 100) {
+
+                lifeLuke = 100;
+            }
+
         }
+
+        displayScoreForLuke(scoreLuke);
+        displayLifeForLuke(lifeLuke);
+
     }
 
     /**
@@ -126,22 +148,31 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTenForLuke(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeLuke > 0 && lifeLuke <= 100 && lifeDarth > 0 && lifeDarth <= 100) {
 
-            if (lifeDarth > 0) {
-                scoreLuke = scoreLuke + 10;
-                addTenScoreLuke = addTenScoreLuke + 10;
-                if (lifeDarth < 7) {
-                    lifeDarth = 0;
-                } else {
-                    lifeDarth = lifeDarth - 7;
-                }
+            scoreLuke += 10;
+            lifeDarth -= 7;
+            addTenScoreLuke += 10;
+            winnerLuke();
+
+        } else {
+
+            if (lifeDarth <= 0) {
+
+                lifeDarth = 0;
+
             }
 
-            displayScoreForLuke(scoreLuke);
-            displayLifeForDarth(lifeDarth);
-            winnerLuke(lifeDarth);
+            if (lifeDarth == 100) {
+
+                lifeDarth = 100;
+
+            }
         }
+
+        displayScoreForLuke(scoreLuke);
+        displayLifeForDarth(lifeDarth);
+
     }
 
     /**
@@ -150,22 +181,31 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFifteenForLuke(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeLuke > 0 && lifeLuke <= 100 && lifeDarth > 0 && lifeDarth <= 100) {
 
-            if (lifeDarth > 0) {
-                scoreLuke = scoreLuke + 15;
-                addFifteenScoreLuke = addFifteenScoreLuke + 15;
-                if (lifeDarth < 10) {
-                    lifeDarth = 0;
-                } else {
-                    lifeDarth = lifeDarth - 10;
-                }
+            scoreLuke += 15;
+            lifeDarth -= 10;
+            addFifteenScoreLuke += 15;
+            winnerLuke();
+
+        } else {
+
+            if (lifeDarth <= 0) {
+
+                lifeDarth = 0;
+
             }
 
-            displayScoreForLuke(scoreLuke);
-            displayLifeForDarth(lifeDarth);
-            winnerLuke(lifeDarth);
+            if (lifeDarth == 100) {
+
+                lifeDarth = 100;
+
+            }
         }
+
+        displayScoreForLuke(scoreLuke);
+        displayLifeForDarth(lifeDarth);
+
     }
 
     /**
@@ -174,22 +214,29 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForDarth(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeDarth > 0 && lifeDarth < 100 && lifeLuke > 0 && lifeLuke < 100) {
 
-            if (lifeDarth < 100) {
-                scoreDarth = scoreDarth + 5;
-                lifeDarth = lifeDarth + 5;
-                addFiveScoreDarth = addFiveScoreDarth + 5;
-                if (lifeDarth < 1) {
-                    lifeDarth = 0;
-                } else {
-                    scoreDarth = ((scoreDarth + 5) - 5);
-                }
+            scoreDarth += 5;
+            lifeDarth += 5;
+            addFiveScoreDarth += 5;
+
+        } else {
+
+            if (lifeDarth <= 0) {
+
+                lifeDarth = 0;
+
             }
 
-            displayScoreForDarth(scoreDarth);
-            displayLifeForDarth(lifeDarth);
+            if (lifeDarth >= 100) {
+
+                lifeDarth = 100;
+            }
         }
+
+        displayScoreForDarth(scoreDarth);
+        displayLifeForDarth(lifeDarth);
+
     }
 
     /**
@@ -198,22 +245,31 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addTenForDarth(View v) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeDarth > 0 && lifeDarth <= 100 && lifeLuke > 0 && lifeLuke <= 100) {
 
-            if (lifeLuke > 0) {
-                scoreDarth = scoreDarth + 10;
-                addTenScoreDarth = addTenScoreDarth + 10;
-                if (lifeLuke < 7) {
-                    lifeLuke = 0;
-                } else {
-                    lifeLuke = lifeLuke - 7;
-                }
+            scoreDarth += 10;
+            lifeLuke -= 7;
+            addTenScoreDarth += 10;
+            winnerDarth();
+
+        } else {
+
+            if (lifeLuke <= 0) {
+
+                lifeLuke = 0;
+
             }
 
-            displayScoreForDarth(scoreDarth);
-            displayLifeForLuke(lifeLuke);
-            winnerDarth(lifeLuke);
+            if (lifeLuke == 100) {
+
+                lifeLuke = 100;
+
+            }
         }
+
+        displayScoreForDarth(scoreDarth);
+        displayLifeForLuke(lifeLuke);
+
     }
 
     /**
@@ -222,21 +278,68 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFifteenForDarth(View view) {
 
-        if (lifeLuke != 0 && lifeDarth != 0) {
+        if (lifeDarth > 0 && lifeDarth <= 100 && lifeLuke > 0 && lifeLuke <= 100) {
 
-            if (lifeLuke > 0) {
-                scoreDarth = scoreDarth + 15;
-                addFifteenScoreDarth = addFifteenScoreDarth + 15;
-                if (lifeLuke < 10) {
-                    lifeLuke = 0;
-                } else {
-                    lifeLuke = lifeLuke - 10;
-                }
+            scoreDarth += 15;
+            lifeLuke -= 10;
+            addFifteenScoreDarth += 15;
+            winnerDarth();
+
+        } else {
+
+            if (lifeLuke <= 0) {
+
+                lifeLuke = 0;
+
             }
 
-            displayScoreForDarth(scoreDarth);
-            displayLifeForLuke(lifeLuke);
-            winnerDarth(lifeLuke);
+            if (lifeLuke == 100) {
+
+                lifeLuke = 100;
+
+            }
+        }
+
+        displayScoreForDarth(scoreDarth);
+        displayLifeForLuke(lifeLuke);
+
+    }
+
+    /**
+     * In case of Victory of Darth new image, message and alert dialog with statistics are being displayed.
+     */
+    public void winnerDarth() {
+
+        String statisticsDarth = (getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun) + getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun));
+
+        if (lifeLuke <= 0) {
+            lukeid.setImageResource(R.drawable.luke_defeated);
+            Toast toast = Toast.makeText(this, darthWinner, Toast.LENGTH_LONG);
+            toast.show();
+            AlertDialog.Builder show = new AlertDialog.Builder(this);
+            show.setTitle(titleDarth);
+            show.setMessage(Html.fromHtml(statisticsDarth));
+            show.setNeutralButton("OK", null);
+            show.show();
+        }
+    }
+
+    /**
+     * In case of Victory of Luke new image, message and alert dialog with statistics are being displayed.
+     */
+    public void winnerLuke() {
+
+        String statisticsLuke = (getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun) + getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun));
+
+        if (lifeDarth <= 0) {
+            vaderid.setImageResource(R.drawable.vader_defeated);
+            Toast toast = Toast.makeText(this, lukeWinner, Toast.LENGTH_LONG);
+            toast.show();
+            AlertDialog.Builder show = new AlertDialog.Builder(this);
+            show.setTitle(titleLuke);
+            show.setMessage(Html.fromHtml(statisticsLuke));
+            show.setNeutralButton("OK", null);
+            show.show();
         }
     }
 
@@ -296,47 +399,5 @@ public class MainActivity extends AppCompatActivity {
         displayLifeForLuke(lifeLuke);
         displayScoreForDarth(scoreDarth);
         displayLifeForDarth(lifeDarth);
-    }
-
-    /**
-     * In case of Victory of Darth new image, message and alert dialog with statistics are being displayed.
-     */
-    public void winnerDarth(int lifeLuke) {
-
-        String statistics = (getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun) + getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun));
-        String title = getString(R.string.titledarth);
-        String darth_winner = getString(R.string.winnerdarth);
-
-        if (lifeLuke <= 0) {
-            lukeid.setImageResource(R.drawable.luke_defeated);
-            Toast toast = Toast.makeText(this, darth_winner, Toast.LENGTH_LONG);
-            toast.show();
-            AlertDialog.Builder show = new AlertDialog.Builder(this);
-                    show.setTitle(title);
-                    show.setMessage(Html.fromHtml(statistics));
-                    show.setNeutralButton("OK", null);
-                    show.show();
-        }
-    }
-
-    /**
-     * In case of Victory of Luke new image, message and alert dialog with statistics are being displayed.
-     */
-    public void winnerLuke(int lifeDarth) {
-
-        String statistics = (getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun) + getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun));
-        String title = getString(R.string.titleluke);
-        String luke_winner = getString(R.string.winnerluke);
-
-        if (lifeDarth <= 0) {
-            vaderid.setImageResource(R.drawable.vader_defeated);
-            Toast toast = Toast.makeText(this, luke_winner, Toast.LENGTH_LONG);
-            toast.show();
-            AlertDialog.Builder show = new AlertDialog.Builder(this);
-                    show.setTitle(title);
-                    show.setMessage(Html.fromHtml(statistics));
-                    show.setNeutralButton("OK", null);
-                    show.show();
-        }
     }
 }

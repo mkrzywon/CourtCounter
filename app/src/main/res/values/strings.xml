@@ -25,8 +25,7 @@
     <string name="titledarth">GAME OVER - Darth\'s Victory</string>
     <string name="darth_received">&lt;p style=text-align:center>&lt;b>Darth received:&lt;/b>&lt;/p></string>
     <string name="luke_received">&lt;p style=text-align:center>&lt;b>Luke received:&lt;/b>&lt;/p></string>
-    <string name="points_shield"> points for using shield&lt;br></string>
-    <string name="points_sword"> points for using sword&lt;br></string>
-    <string name="points_gun"> points for using gun&lt;br></string>
-
+    <string name="points_shield">&#160;points for using shield&lt;br></string>
+    <string name="points_sword">&#160;points for using sword&lt;br></string>
+    <string name="points_gun">&#160;points for using gun&lt;br></string>
 </resources>
