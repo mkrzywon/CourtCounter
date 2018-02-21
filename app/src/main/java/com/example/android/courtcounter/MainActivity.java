@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForLuke(View v) {
 
-        if (lifeLuke > 0 && lifeLuke < 100) {
+        if (lifeLuke > 0 && lifeLuke < 100 && lifeDarth > 0 && lifeDarth < 100) {
 
             scoreLuke += 5;
             lifeLuke += 5;
@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addFiveForDarth(View v) {
 
-        if (lifeDarth > 0 && lifeDarth < 100) {
+        if (lifeDarth > 0 && lifeDarth < 100 && lifeLuke > 0 && lifeLuke < 100) {
 
             scoreDarth += 5;
             lifeDarth += 5;
