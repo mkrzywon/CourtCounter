@@ -276,7 +276,7 @@
                 android:layout_marginTop="@dimen/standard"
                 android:background="@android:color/transparent"
                 android:contentDescription="@string/reset_btn"
-                android:onClick="reset_button"
+                android:onClick="resetButton"
                 android:src="@drawable/reset" />
 
         </LinearLayout>
