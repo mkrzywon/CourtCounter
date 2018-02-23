@@ -359,7 +359,7 @@
             android:layout_marginTop="@dimen/standard"
             android:background="@android:color/transparent"
             android:contentDescription="@string/reset_btn"
-            android:onClick="reset_Button"
+            android:onClick="resetButton"
             android:paddingBottom="@dimen/standard"
             android:src="@drawable/reset" />
 

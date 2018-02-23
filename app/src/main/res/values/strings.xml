@@ -28,4 +28,5 @@
     <string name="points_shield">&#160;points for using shield&lt;br></string>
     <string name="points_sword">&#160;points for using sword&lt;br></string>
     <string name="points_gun">&#160;points for using gun&lt;br></string>
+    <string name="ok">OK</string>
 </resources>
