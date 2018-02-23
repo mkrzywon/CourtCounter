@@ -383,7 +383,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Resets score and life levels of Luke and Darth to defaults.
      */
-    public void resetButton(View v) {
+    public void reset_Button(View v) {
         lukeid.setImageResource(R.drawable.luke);
         vaderid.setImageResource(R.drawable.vader);
         scoreLuke = 0;
