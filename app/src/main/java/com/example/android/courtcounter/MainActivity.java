@@ -21,16 +21,16 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_FIVE_SCORE_DARTH = "StatsFiveScoreDarth";
     private static final String KEY_TEN_SCORE_DARTH = "StatsTenScoreDarth";
     private static final String KEY_FIFTEEN_SCORE_DARTH = "StatsFifteenScoreDarth";
-    private int scoreLuke = 0;
-    private int scoreDarth = 0;
+    private int scoreLuke;
+    private int scoreDarth;
     private int lifeLuke = 100;
     private int lifeDarth = 100;
-    private int addFiveScoreLuke = 0;
-    private int addTenScoreLuke = 0;
-    private int addFifteenScoreLuke = 0;
-    private int addFiveScoreDarth = 0;
-    private int addTenScoreDarth = 0;
-    private int addFifteenScoreDarth = 0;
+    private int addFiveScoreLuke;
+    private int addTenScoreLuke;
+    private int addFifteenScoreLuke;
+    private int addFiveScoreDarth;
+    private int addTenScoreDarth;
+    private int addFifteenScoreDarth;
 
     private ImageView lukeid;
     private ImageView vaderid;
@@ -152,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
             scoreLuke += 10;
             lifeDarth -= 7;
+
             addTenScoreLuke += 10;
             winnerLuke();
 
@@ -319,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder show = new AlertDialog.Builder(this);
             show.setTitle(titleDarth);
             show.setMessage(Html.fromHtml(statisticsDarth));
-            show.setNeutralButton("OK", null);
+            show.setNeutralButton(getString(R.string.ok), null);
             show.show();
         }
     }
@@ -338,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder show = new AlertDialog.Builder(this);
             show.setTitle(titleLuke);
             show.setMessage(Html.fromHtml(statisticsLuke));
-            show.setNeutralButton("OK", null);
+            show.setNeutralButton(getString(R.string.ok), null);
             show.show();
         }
     }
@@ -382,7 +383,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Resets score and life levels of Luke and Darth to defaults.
      */
-    public void reset_button(View v) {
+    public void resetButton(View v) {
         lukeid.setImageResource(R.drawable.luke);
         vaderid.setImageResource(R.drawable.vader);
         scoreLuke = 0;
