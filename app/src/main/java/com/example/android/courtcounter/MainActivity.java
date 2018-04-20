@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Sets the path and strings for final message of both players.
      */
-    public void viewComponents() {
+    private void viewComponents() {
 
         lukeid = findViewById(R.id.lukeid);
         vaderid = findViewById(R.id.vaderid);
@@ -309,11 +309,12 @@ public class MainActivity extends AppCompatActivity {
     /**
      * In case of Victory of Darth new image, message and alert dialog with statistics are being displayed.
      */
-    public void winnerDarth() {
+    private void winnerDarth() {
 
         String statisticsDarth = (getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun) + getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun));
 
         if (lifeLuke <= 0) {
+
             lukeid.setImageResource(R.drawable.luke_defeated);
             Toast toast = Toast.makeText(this, darthWinner, Toast.LENGTH_LONG);
             toast.show();
@@ -328,11 +329,12 @@ public class MainActivity extends AppCompatActivity {
     /**
      * In case of Victory of Luke new image, message and alert dialog with statistics are being displayed.
      */
-    public void winnerLuke() {
+    private void winnerLuke() {
 
         String statisticsLuke = (getString(R.string.luke_received) + addFiveScoreLuke + getString(R.string.points_shield) + addTenScoreLuke + getString(R.string.points_sword) + addFifteenScoreLuke + getString(R.string.points_gun) + getString(R.string.darth_received) + addFiveScoreDarth + getString(R.string.points_shield) + addTenScoreDarth + getString(R.string.points_sword) + addFifteenScoreDarth + getString(R.string.points_gun));
 
         if (lifeDarth <= 0) {
+
             vaderid.setImageResource(R.drawable.vader_defeated);
             Toast toast = Toast.makeText(this, lukeWinner, Toast.LENGTH_LONG);
             toast.show();
@@ -347,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Luke.
      */
-    public void displayScoreForLuke(int score) {
+    private void displayScoreForLuke(int score) {
         TextView scoreView = findViewById(R.id.luke_score);
         scoreView.setText(String.valueOf(score));
 
@@ -356,7 +358,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays life level of Luke.
      */
-    public void displayLifeForLuke(int score) {
+    private void displayLifeForLuke(int score) {
         TextView scoreView = findViewById(R.id.luke_life);
         scoreView.setText(String.valueOf(score));
 
@@ -365,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Darth.
      */
-    public void displayScoreForDarth(int score) {
+    private void displayScoreForDarth(int score) {
         TextView scoreView = findViewById(R.id.darth_score);
         scoreView.setText(String.valueOf(score));
 
@@ -374,7 +376,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays life level of Darth.
      */
-    public void displayLifeForDarth(int score) {
+    private void displayLifeForDarth(int score) {
         TextView scoreView = findViewById(R.id.darth_life);
         scoreView.setText(String.valueOf(score));
 
